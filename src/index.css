@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  html , body , #root{
+    @apply h-full
+  }
+}
+
+@layer components{
+  .error{
+    @apply w-2/3 rounded-xl bg-red-600 p-3 text-center text-white text-2xl 
+  }
+  .navbar{
+    @apply w-full h-14 flex bg-zinc-800 items-center justify-between px-3 border-b-2 border-yellow-600 relative 
+  }
+  .navbar-buttons{
+    @apply flex items-center lg:flex justify-around pb-3 lg:p-0 lg:gap-x-5
+  }
+  .navbar-form{
+    @apply flex relative w-full items-center justify-center  lg:w-2/3 lg:mx-10
+  }
+  .navbar-form-input{
+    @apply w-full h-8 focus-within:outline-none rounded-xl px-10 text-lg
+  }
+  .navbar-form-button{
+    @apply absolute left-0 ml-4
+  }
+  .navbar-hamburger{
+    @apply text-white text-3xl lg:hidden
+  }
+  .nav-control{
+    @apply absolute opacity-0 hidden -bottom-24 z-20 flex-col gap-y-5 bg-zinc-800 border-b border-yellow-600 w-full inset-x-0 lg:relative lg:bg-transparent lg:border-none lg:flex-row lg:inset-0 lg:justify-around transition-all lg:flex lg:opacity-100
+  }
+  .movie-detail{
+    @apply w-full bg-zinc-800 h-full p-10 bg-opacity-40 flex items-center gap-32 flex-col mt-96 lg:mt-0 lg:flex-row
+  }
+  .detail-content{
+    @apply flex flex-col gap-4 items-center lg:items-start
+  }
+  .detail-average{
+    @apply w-full flex justify-center items-center lg:justify-between
+
+  }
+}
